@@ -78,9 +78,6 @@ def stream(ssc, pwords, nwords, duration):
     runningCounts.pprint()
     # Keep track of a running total counts and print this at every time step (use the pprint function).
     # Let the counts variable hold the word counts for all time steps
-    # You will need to use the foreachRDD function.
-    # For our implementation, counts looked like:
-    #   [[("positive", 100), ("negative", 50)], [("positive", 80), ("negative", 60)], ...]
     counts = []
     
     total.foreachRDD(lambda t,rdd: counts.append(rdd.collect()))
