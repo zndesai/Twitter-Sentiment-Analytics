@@ -3,10 +3,6 @@ from kafka import SimpleProducer, KafkaClient
 import tweepy
 import configparser
 
-# Note: Some of the imports are external python libraries. They are installed on the current machine.
-# If you are running multinode cluster, you have to make sure that these libraries
-# and currect version of Python is installed on all the worker nodes.
-
 class TweeterStreamListener(tweepy.StreamListener):
     """ A class to read the twiiter stream and push it to Kafka"""
 
